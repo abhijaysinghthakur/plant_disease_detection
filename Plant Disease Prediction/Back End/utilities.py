@@ -45,7 +45,7 @@ def makePrediction(path):
  'Tomato___Tomato_mosaic_virus',
  'Tomato___healthy']
 
-    model = load_model("Model.h5")
+    model = load_model("../Model/Model.h5")
 
     img = load_img(path,target_size=(150,150,3))
     img = img_to_array(img)
