@@ -68,7 +68,7 @@ const App: React.FC = () => {
     formData.append('img', selectedFile);
 
     try {
-      const response = await axios.post('http://localhost:38000/predict', formData, {
+      const response = await axios.post('/predict', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
