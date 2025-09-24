@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Upload, Leaf, AlertCircle, CheckCircle, Loader2, Camera, Sparkles, ArrowRight, Shield, Zap, Brain, Home, FileImage, Info, Github, Mail, Phone, Star, Award, Users, TrendingUp, ChevronRight, Play, Download, Heart } from 'lucide-react';
+import { Upload, Leaf, AlertCircle, CheckCircle, Loader2, Camera, Sparkles, ArrowRight, Shield, Zap, Brain, Home, Info, Star, Award, Users, TrendingUp, ChevronRight, Play, Heart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import axios from 'axios';
 
