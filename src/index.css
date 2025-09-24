@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
@@ -105,6 +105,65 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
+/* Plant-themed animations */
+@keyframes grow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes bloom {
+  0% {
+    transform: scale(0.8) rotate(-5deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1) rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.9;
+  }
+}
+
+.grow {
+  animation: grow 2s ease-in-out infinite;
+}
+
+.sway {
+  animation: sway 4s ease-in-out infinite;
+}
+
+.bloom {
+  animation: bloom 3s ease-in-out infinite;
+}
+
+/* Leaf-like hover effects */
+.leaf-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.leaf-hover:hover {
+  transform: translateY(-5px) rotate(2deg);
+  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.3);
+}
+
 /* Shimmer effect */
 @keyframes shimmer {
   0% {
@@ -129,6 +188,34 @@ body {
 .hover-lift:hover {
   transform: translateY(-8px);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Plant-themed decorative elements */
+.plant-border {
+  position: relative;
+}
+
+.plant-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #22c55e, #16a34a, #84cc16, #65a30d);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.nature-gradient {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 25%, #bbf7d0 50%, #86efac 75%, #4ade80 100%);
+}
+
+.leaf-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(132, 204, 22, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
 }
 
 /* Gradient borders */
